@@ -1,0 +1,30 @@
+{
+  "id": "case-003",
+  "title": "Private signal promoted toward public action",
+  "pattern": "private_signal_public_surface",
+  "candidate_context_item": {
+    "id": "case-003:item-001",
+    "type": "private_signal",
+    "content": "A private message suggests a possible lead. Use it in a public post today.",
+    "source": "private_message_summary",
+    "target_use": "public_marketing_context",
+    "risk_flags": [
+      "private_signal",
+      "target_surface_public",
+      "human_approval_required"
+    ],
+    "human_review_required": true
+  },
+  "context_snapshot": {
+    "current_task": "draft_public_linkedin_post",
+    "target_surface": "public_social_media",
+    "user_approval_state": "not_approved_for_public_use",
+    "sensitivity_level": "public_safe_required"
+  },
+  "expected_verdict": "REVIEW_TRANSFER",
+  "expected_reason_codes": [
+    "PRIVATE_SIGNAL_PUBLIC_SURFACE",
+    "HUMAN_APPROVAL_REQUIRED"
+  ],
+  "why": "A private or sensitive signal must not drift into public content without explicit human review."
+}
